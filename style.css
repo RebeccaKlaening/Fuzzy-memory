@@ -1,0 +1,76 @@
+* {
+
+box-sizing: border-box;
+}
+
+body {
+background-color: pink;
+display: flex;
+height: 100vh;
+width: 100vw;
+
+}
+
+
+img {
+width: 100px;
+height: 100px;
+}
+
+.memory-game {
+background-color: aqua;
+width: 640px;
+height: 640px;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+}
+
+.memory-card {
+cursor: pointer;
+border-radius: 10px;
+background-color: white;
+width: 140px;
+height: 140px;
+position: relative;
+transform: scale(1);
+}
+
+.memory-card:active {
+transform: scale(.97);
+transition: transform .2s;
+}
+
+.front-face, .back-face {
+padding: 20px;
+height:100%;
+width:100%;
+position: absolute;
+border-radius: 10px;
+}
+
+/*.restart-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-top: 50px;
+  }
+
+  .restart-button:hover {background-color: #3e8e41}
+
+  .restart-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  } */
