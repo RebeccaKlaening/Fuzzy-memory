@@ -1,73 +1,48 @@
 * {
 
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-background-color: pink;
-height: 100vh;
-width: 100vw;
+  background-color: pink;
+  height: 100vh;
+  width: 100vw;
 
-}
-
-h1 {
-text-align: center;
-padding: 20px;
-font-family: sans-serif;
-
-}
-
-img {
-width: 100px;
-height: 100px;
 }
 
 .memory-game {
-background-color: aqua;
-width: 640px;
-height: 640px;
-margin: auto;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-align-items: center;
-perspective: 1000px;
-
+  background-color: aqua;
+  border-radius: 10px;
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
 }
 
 .memory-card {
-cursor: pointer;
-border-radius: 10px;
-background-color: white;
-width: 140px;
-height: 140px;
-position: relative;
-transform: scale(1);
-transform-style: preserve-3d;
-transition: transform .5s;
-}
-
-.memory-card.flip {
-transform: rotateY(180deg);
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  transform: scale(1);
 
 }
+.memory-card:active {
+  transform: scale(0.97);
+ transition: transform .2s;
+}
 
+.front-face,
 .back-face {
-padding: 20px;
-height:100%;
-width:100%;
-position: absolute;
-border-radius: 10px;
-backface-visibility: hidden;
-}
-
-.front-face {
-padding: 20px;
-height:100%;
-width:100%;
-position: absolute;
-border-radius: 10px;
-backface-visibility: hidden;
-transform: rotateY(180deg);
-
+  width: 140px;
+  height: 140px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  position: absolute;
+  margin: 0px;
 }
