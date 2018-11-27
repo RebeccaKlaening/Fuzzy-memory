@@ -15,8 +15,16 @@ this.classList.add('flip');
   hasFlippedCard = false;
   secondCard = this;
 
-    // do cards match
-    
+    // do cards match?
+    if (firstCard.dataset.image === secondCard.dataset.image) {
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+}  else {
+
+      // not a match
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip'); 
+}
 
   }
 }
