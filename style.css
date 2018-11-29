@@ -63,7 +63,7 @@ font-family: sans-serif;
   transform: rotateY(180deg);
 }
 
-.button {
+#button {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -80,7 +80,7 @@ box-shadow: 0 9px #999;
 
 }
 
-.button:active {
+#button:active {
   transition: transform .2s;
   box-shadow: 0 5px #666;
   transform: translateY(4px);

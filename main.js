@@ -43,7 +43,7 @@ function flipCard() {
   secondCard.classList.remove('flip');
 
   resetBoard();
-  }, 1500);
+  }, 500);
 }
 
   function resetBoard() {
@@ -60,3 +60,8 @@ function flipCard() {
 
 
 cards.forEach(card=> card.addEventListener('click', flipCard));
+
+
+document.getElementById("button").addEventListener("click", function() {
+	location.reload();
+});
