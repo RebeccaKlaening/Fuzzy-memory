@@ -19,4 +19,4 @@ Memory card game
 
 
 **License**
-MIT 
+* MIT 
