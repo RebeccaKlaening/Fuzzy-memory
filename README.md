@@ -1,7 +1,7 @@
 # Fuzzy-memory
 Memory card game 
 
-The Assigment
+**The Assigment**
 
 * There should be at least 8 pairs and a maximum of 10 pairs.
 * The pairs should be randomly positioned before a new game starts.
@@ -9,7 +9,7 @@ The Assigment
 * The project should be written in HTML, CSS and JavaScript.
 
 
-How To Use
+**How To Use**
 
 * Clone/download repository github.com/RebeccaKlaening/Fuzzy-memory.git from GitHub
 * Download/open MAMP
