@@ -1,33 +1,49 @@
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard(){
+if (lockBoard) return;
 this.classList.add('flip');
 
   if(!hasFlippedCard) {
       // first click
     hasFlippedCard = true;
     firstCard = this;
-}   else {
+      return;
+    }
     // second click
-  hasFlippedCard = false;
   secondCard = this;
-
-    // do cards match?
-    if (firstCard.dataset.image === secondCard.dataset.image) {
-      firstCard.removeEventListener('click', flipCard);
-      secondCard.removeEventListener('click', flipCard);
-}  else {
-
-      // not a match
-      firstCard.classList.remove('flip');
-      secondCard.classList.remove('flip'); 
-}
-
+    hasFlippedCard = false;
+    checkForMatch();
   }
+
+
+function checkForMatch() {
+if (firstCard.dataset.image === secondCard.dataset.image) {
+  disableCards();
+  return;
+  }
+
+  unflipCards();
 }
+
+function disableCards(){
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+}
+
+  function unflipCards() {
+    lockBoard = true;
+  setTime0ut (() => {
+  firstCard.classList.remove('flip');
+  secondCard.classList.remove('flip');
+    lockBoard = false;
+  }, 1500);
+}
+
 
 
 

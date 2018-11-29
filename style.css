@@ -76,12 +76,14 @@ border-radius: 20px;
 height: 60px;
 width: 250px;
 border: none;
+box-shadow: 0 9px #999;
 
 }
 
 .button:active {
-  transform: scale(0.97);
   transition: transform .2s;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .placement {
