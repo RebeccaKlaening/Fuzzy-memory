@@ -17,6 +17,9 @@ Memory card game
 * Press "Start Servers" in MAMP
 * Open the index.html-file by typing localhost:8888 in your browser
 
+**Tested by**
+* Gustav Svendsen
+* Isabelle Krall 
 
 **License**
 * MIT 
