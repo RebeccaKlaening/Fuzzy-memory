@@ -21,47 +21,49 @@ function flipCard() {
   checkForMatch();
 }
 
-  function checkForMatch(){
-    if (firstCard.dataset.image === secondCard.dataset.image) {
+// to check if the cards match
+function checkForMatch(){
+  if (firstCard.dataset.image === secondCard.dataset.image) {
     disableCards();
-   return;
-   }
+    return;
+  }
 
-   unflipCards();
+  unflipCards();
 }
 
-  function disableCards(){
+function disableCards(){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
 
-    resetBoard();
+  resetBoard();
 }
 
-  function unflipCards() {
+function unflipCards() {
   setTimeout(() => {
-  firstCard.classList.remove('flip');
-  secondCard.classList.remove('flip');
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
 
-  resetBoard();
+    resetBoard();
   }, 500);
 }
 
-  function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-  }
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
 
-   (function shuffle() {
-    cards.forEach(card => {
-      let ramdomPos = Math.floor(Math.random() * 12);
-     card.style.order = ramdomPos;
-    });
-   })();
+// to shuffle all the cards
+(function shuffle() {
+  cards.forEach(card => {
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
+  });
+})();
 
 
 cards.forEach(card=> card.addEventListener('click', flipCard));
 
 
 document.getElementById("button").addEventListener("click", function() {
-	location.reload();
+  location.reload();
 });
