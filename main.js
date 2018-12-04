@@ -4,6 +4,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+// to flip the card over
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -30,7 +31,7 @@ function checkForMatch(){
 
   unflipCards();
 }
-
+// if not a match, take away click event
 function disableCards(){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
@@ -47,6 +48,7 @@ function unflipCards() {
   }, 500);
 }
 
+// reset first and second card after been clicked 
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
@@ -63,7 +65,7 @@ function resetBoard() {
 
 cards.forEach(card=> card.addEventListener('click', flipCard));
 
-
+// to restart the game
 document.getElementById("button").addEventListener("click", function() {
   location.reload();
 });
